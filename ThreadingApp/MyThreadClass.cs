@@ -18,6 +18,8 @@ namespace ThreadingApp
                 Console.WriteLine("Name of Thread: " + thread.Name + " = " + loopCount);
                 Thread.Sleep(500);
             }
+            int threadId = Thread.CurrentThread.ManagedThreadId;
+            Console.WriteLine($"The thread 0x{threadId} has exited with code 0 (0x0).");
         }
 
         public static void Thread2()
@@ -28,6 +30,8 @@ namespace ThreadingApp
                 Console.WriteLine("Name of Thread: " + thread.Name + " = " + loopCount);
                 Thread.Sleep(1500);
             }
+            int threadId = Thread.CurrentThread.ManagedThreadId;
+            Console.WriteLine($"The thread 0x{threadId} has exited with code 0 (0x0).");
         }
     }
 }
